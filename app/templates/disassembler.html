@@ -1,0 +1,47 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+
+    {% for command in commands %}
+        <div class="row">
+            <div class="col-sm-1">
+                PC:{{command.PC}}
+            </div>
+            <div class="col-sm-2">
+                <strong>{{command.command}}</strong><br/>
+            </div>
+            <div class="col-sm-6">
+                Output:{{command.output_buffer}}<br/>
+            </div>
+            <div class="col-sm-3">
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#myDIV_{{loop.index}}" aria-expanded="false" aria-controls="collapseExample">
+            View Full Memory at this point (Warning very slow)
+          </button>
+            </div>
+        </div>
+
+        <div id="myDIV_{{loop.index}}" class="row collapse">
+            {% for mem in command.memory %}
+            <div class="col-sm-2" style="border-style: solid;border-width: 1px;">
+                {{loop.index}}-<strong>{{mem}}</strong><br/>
+            </div>
+            {% endfor %}
+        </div>
+<hr/>
+    {% endfor %}
+
+<script>
+function myFunction(index) {
+    return function(){
+          var x = document.getElementById("myDIV_" + index);
+          if (x.style.display === "none") {
+            x.style.display = "block";
+          } else {
+            x.style.display = "none";
+          }
+    }
+}
+</script>
+
+{% endblock %}

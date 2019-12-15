@@ -1,0 +1,9 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h1>LC-3 Virtual Machine Visualiser</h1>
+<p>Click a link below to view an LC-3 program running and see memory at each step</p>
+{% for obj in obj_list %}
+<a href={{url_for('main.view_disassembled',path=obj)}} class="btn btn-primary">{{obj}}</a><br/><br/>
+{% endfor %}
+{% endblock %}
