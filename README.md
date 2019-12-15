@@ -1,14 +1,8 @@
 # mini_virtual_machine
 A small lc3 virtual machine for education purposes.
-<span>
-<img src="./screenshots/mainmenu.png" width="48%">
-</span>
-<span>
-<img src="./screenshots/helloworld.png" width="48%">
-</span>
-<span>
+<img src="./screenshots/mainmenu.png">
+<img src="./screenshots/helloworld.png">
 <img src="./screenshots/memory.png">
-</span>
 ## Pre-requisites
 This project uses python3.
 
