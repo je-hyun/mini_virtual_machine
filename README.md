@@ -9,6 +9,29 @@ This project uses python3.
 Install requirements:
 ```pip install -r requirements.txt```
 
+## Run Instructions
+
+```shell
+git clone https://github.com/je-hyun/mini_virtual_machine.git
+cd mini_virtual_machine
+```
+
+Once your virtual environment is activated, set up using these commands:
+```shell
+export FLASK_APP=app.py
+pip install -r requirements.txt
+```
+
+And finally, to run:
+```shell
+flask run
+```
+
+Optionally, you could execute the following for developer mode:
+```shell
+export FLASK_ENV=development
+```
+
 ## Contributors
 * Je Hyun Kim
 
